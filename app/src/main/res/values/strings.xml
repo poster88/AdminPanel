@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AdminPanelRealm</string>
+    <string name="hint_pass">Password</string>
+    <string name="hint_login">Login</string>
+    <string name="btn_login">login</string>
+    <string name="btn_pass">password</string>
+    <string name="btn_signIn">signIn</string>
+</resources>
