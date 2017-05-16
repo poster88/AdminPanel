@@ -53,15 +53,14 @@ public class CategoryModel extends RealmObject{
     }
 
     public static class StaticCategory{
-        private static List<CategoryModel> categoryModels = new ArrayList<>();
 
-        public  static List<CategoryModel> getCategoryModels(){
-            return categoryModels;
-        }
+        private static List<CategoryModel> categoryModels = new ArrayList<>();
 
         public static void setCategoryModels(List<CategoryModel> categoryModels){
             StaticCategory.categoryModels = categoryModels;
         }
-
+        public  static List<CategoryModel> getCategoryModels(){
+            return categoryModels;
+        }
     }
 }

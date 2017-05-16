@@ -7,20 +7,24 @@ import android.view.View;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import io.realm.Realm;
 
 
 public class BaseFragment extends Fragment{
     private Unbinder unbinder;
+    protected Realm realm;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         unbinder = ButterKnife.bind(this, view);
+        realm = Realm.getDefaultInstance();
     }
 
     @Override
     public void onDestroyView() {
         unbinder.unbind();
+        realm.close();
         super.onDestroyView();
     }
 }

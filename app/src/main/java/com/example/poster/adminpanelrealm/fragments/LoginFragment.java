@@ -45,12 +45,7 @@ public class LoginFragment extends BaseFragment {
                 .findAll();
         System.out.println("size is: " + resultLogin.size());
         ArrayList<UserModel> list = new ArrayList<>(resultLogin);
-        for (UserModel userModel: list){
-            System.out.println(
-                    userModel.getName() + " " + userModel.getLastName() + " " +
-                            userModel.getLogin() + " " + userModel.getPass()
-            );
-        }
+        ((MainActivity)getActivity()).changeFragment(MainFragment.newInstance());
     }
     @OnClick (R.id.passBtn)
     public void  onSignInClick(){

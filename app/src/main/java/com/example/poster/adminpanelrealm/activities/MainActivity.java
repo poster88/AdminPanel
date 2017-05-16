@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.container);
         changeFragment(LoginFragment.newInstance());
-        //changeFragment(MainFragment.newInstance());
     }
 
     public void changeFragment(Fragment fragment) {
@@ -36,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
             changeFragment(MainFragment.newInstance());
             return;
         }
-
         super.onBackPressed();
     }
 }

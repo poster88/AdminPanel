@@ -35,7 +35,7 @@ public class MainFragment extends BaseFragment {
         ((MainActivity)getActivity()).changeFragment(MakeProductFragment.newInstance());
     }
 
-    @OnClick(R.id.saveCategoryBtn)
+    @OnClick(R.id.addCategory)
     public void showFragmentMakeCategory(){
         ((MainActivity)getActivity()).changeFragment(MakeCategoryFragment.newInstance());
     }

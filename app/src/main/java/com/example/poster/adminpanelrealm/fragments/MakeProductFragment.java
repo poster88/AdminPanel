@@ -21,13 +21,13 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MakeProductFragment extends BaseFragment{
+
     public static MakeProductFragment newInstance(){
         return new MakeProductFragment();
     }
-    @BindView(R.id.containerInProductFr)
+
+    @BindView(R.id.container_products)
     LinearLayout containerCategories;
-    //@BindView(R.id.containerSubCategory)
-    LinearLayout containerSubCategory;
     private View.OnClickListener addNewLineListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -56,25 +56,23 @@ public class MakeProductFragment extends BaseFragment{
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         view = getActivity().getLayoutInflater().inflate(R.layout.add_line, null);
-
+        //category
         ImageView addNewLine = ButterKnife.findById(view, R.id.add_line);
         addNewLine.setOnClickListener(addNewLineListener);
         Spinner spinner = ButterKnife.findById(view, R.id.spinner);
-
         List<String> categories = new ArrayList<>();
         List<String> subCategories = new ArrayList<>();
         for (int i = 0; i < CategoryModel.StaticCategory.getCategoryModels().size(); i++) {
             categories.add(CategoryModel.StaticCategory.getCategoryModels().get(i).getName());
-            for (int j = 0; j < CategoryModel.StaticCategory.getCategoryModels().get(i).getSubCategories().size(); j++) {
-                subCategories.add(CategoryModel.StaticCategory.getCategoryModels().get(i).getSubCategories().get(j).getName());
-            }
         }
+        /*for (int j = 0; j < CategoryModel.StaticCategory.getCategoryModels().get(0).getSubCategories().size(); j++) {
+                subCategories.add(CategoryModel.StaticCategory.getCategoryModels().get(0).getSubCategories().get(j).getName());
+        }*/
 
         spinner.setAdapter(new ArrayAdapter<>(getActivity(),
-                android.R.layout.simple_list_item_1, new String[]{"cat 1", "cat2"}));
-        containerSubCategory.addView(view);
+                android.R.layout.simple_list_item_1, categories));
+        containerCategories.addView(view);
 
-        //System.out.println("count " + containerSubCategory.getChildCount());
         View view1 = getActivity().getLayoutInflater().inflate(R.layout.add_line, null);
         ImageView addNewLine1 = ButterKnife.findById(view1, R.id.add_line);
         //addNewLine1.setOnClickListener(addNewLineListener1);

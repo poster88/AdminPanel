@@ -2,7 +2,6 @@ package com.example.poster.adminpanelrealm.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,13 +13,9 @@ import com.example.poster.adminpanelrealm.activities.BaseFragment;
 import com.example.poster.adminpanelrealm.models.UserModel;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.realm.Realm;
 
-/**
- * Created by POSTER on 08.05.2017.
- */
 
 public class RegistrationFragment extends BaseFragment{
     @BindView(R.id.loginET) EditText login;
