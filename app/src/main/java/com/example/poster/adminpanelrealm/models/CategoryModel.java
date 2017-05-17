@@ -52,6 +52,11 @@ public class CategoryModel extends RealmObject{
         this.subCategories = subCategories;
     }
 
+    @Override
+    public String toString() {
+        return "name = " + name  + " ; ";
+    }
+
     public static class StaticCategory{
 
         private static List<CategoryModel> categoryModels = new ArrayList<>();

@@ -11,7 +11,7 @@ public class ProductModel extends RealmObject {
     private String name;
     private String description;
     private int count;
-    private RealmList<SubCategoryModel> subCategories;
+    private RealmList<SubCategoryModel> subCategories = new RealmList<>();
 
     public ProductModel() {
     }

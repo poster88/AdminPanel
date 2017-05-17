@@ -30,13 +30,13 @@ public class MainFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    @OnClick(R.id.addProduct)
-    public void showFragmentMakeProduct(){
-        ((MainActivity)getActivity()).changeFragment(MakeProductFragment.newInstance());
-    }
-
     @OnClick(R.id.addCategory)
     public void showFragmentMakeCategory(){
         ((MainActivity)getActivity()).changeFragment(MakeCategoryFragment.newInstance());
+    }
+
+    @OnClick(R.id.addProduct)
+    public void showFragmentMakeProduct(){
+        ((MainActivity)getActivity()).changeFragment(MakeProductFragment.newInstance());
     }
 }

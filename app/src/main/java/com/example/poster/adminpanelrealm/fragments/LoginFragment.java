@@ -43,8 +43,8 @@ public class LoginFragment extends BaseFragment {
                 .equalTo("login", login.getText().toString())
                 .equalTo("pass", pass.getText().toString())
                 .findAll();
-        System.out.println("size is: " + resultLogin.size());
-        ArrayList<UserModel> list = new ArrayList<>(resultLogin);
+        //System.out.println("size is: " + resultLogin.size());
+        //ArrayList<UserModel> list = new ArrayList<>(resultLogin);
         ((MainActivity)getActivity()).changeFragment(MainFragment.newInstance());
     }
     @OnClick (R.id.passBtn)

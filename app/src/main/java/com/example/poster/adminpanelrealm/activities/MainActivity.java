@@ -7,6 +7,7 @@ import android.os.Bundle;
 import com.example.poster.adminpanelrealm.R;
 import com.example.poster.adminpanelrealm.fragments.LoginFragment;
 import com.example.poster.adminpanelrealm.fragments.MainFragment;
+import com.example.poster.adminpanelrealm.fragments.MakeCategoryFragment;
 import com.example.poster.adminpanelrealm.fragments.MakeProductFragment;
 import com.example.poster.adminpanelrealm.fragments.RegistrationFragment;
 
@@ -32,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         if (fragment instanceof MakeProductFragment){
+            changeFragment(MainFragment.newInstance());
+            return;
+        }
+        if (fragment instanceof MakeCategoryFragment){
             changeFragment(MainFragment.newInstance());
             return;
         }
